@@ -1,92 +1,263 @@
-Q3
- -----type this one to create react projet in terminal -----
-npx create-react-app food_ordering_frontend
-cd food_ordering_frontend
+==rectangle width==
+ #include<stdio.h>
+ int main()
+ {
+     float length = 25.12428;
+     float width = 12.59;
+      float area = length * width;
 
-then create below pages seperately
+      printf("The area of the rectangle is %f square centimeter/n",area);
+      return 0;
+ }
 
------create WelcomePage.js page-------
+==basic==
+#include <stdio.h>
 
-import React from 'react';
+int main()
+{
+    char name[20];
+    char lname[20];
+    int year;
 
-const WelcomePage = () => {
-    return (
-        <div>
-            <h1>Welcome to Food Ordering System</h1>
-            {/* Add your content here */}
-        </div>
-    );
+    printf("What is your firstname?");
+    scanf("%s", &name);
+
+    printf("What is your lastname?");
+    scanf("%s", &lname);
+
+    printf("What is your birth year?");
+    scanf("%d", &year);
+
+    printf("%s %s was born in %d", &name, &lname, year);
+
+    return 0;
 }
 
-export default WelcomePage;
 
------create Login.js ---------
-import React from 'react';
+==boolean==
 
-const Login = () => {
-    return (
-        <div>
-            {/* Login form */}
-        </div>
-    );
-}
-export default Login;
+#include <stdio.h>
+#include <stdbool.h> // Include this header for boolean types
 
+int main()
+{
+    bool condition1 = true;
+    bool condition2 = false;
+    bool condition3 = true;
+    bool result1 = condition1 && condition2;
+    bool result2 = condition1 || condition3;
+    bool result3 = !condition2;
+    printf("Result 1: %s\n", result1 ? "true" : "false");
+    printf("Result 2: %s\n", result2 ? "true" : "false");
+    printf("Result 3: %s\n", result3 ? "true" : "false");
 
----------- UserRegistration.js -------
-import React from 'react';
-
-const UserRegistration = () => {
-    return (
-        <div>
-            {/* Registration form */}
-        </div>
-    );
+    return 0;
 }
 
-export default UserRegistration;
+==odd even==
+#include <stdio.h>
 
-
-------FoodOrdering.js ----------
-import React from 'react';
-
-const FoodOrdering = () => {
-    return (
-        <div>
-            {/* Food ordering interface */}
-        </div>
-    );
-}
-export default FoodOrdering;
-
------- type this one inside the terminal -------
-npm install react-router-dom
-
-------- then create App.js -----------
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import WelcomePage from './WelcomePage';
-import Login from './Login';
-import UserRegistration from './UserRegistration';
-
-const App = () => {
-    return (
-        <Router>
-            <div>
-                <Switch>
-                    <Route exact path="/" component={WelcomePage} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/register" component={UserRegistration} />
-                </Switch>
-            </div>
-        </Router>
-    );
+int main() {
+    int value = 6;
+    char result = (value % 2 == 0) ? 'E' : 'O'; // Check if even or odd
+    printf("Value is %c (E: Even, O: Odd)\n", result);
+    return 0;
 }
 
-export default App;
 
---------me tika dala wen bn laraveel eka hiriyata kragnn bha kiwa bn palweni eka ubala arn giypu code ekma tiyenwa -----
+==pass fail==
+#include<stdio.h>
 
 
+int main()
+{
+    int mark=45;
+    if(mark>=50)
+     {
+      printf("pass\n");
+     }else{
 
+     printf("fail\n");
+     }
+     return 0;
+    }
+
+
+==electricity==
+#include <stdio.h>
+
+int main() {
+    int units;
+    float bill = 0.0;
+
+    // Input the number of units
+    printf("Enter the number of units: ");
+    scanf("%d", &units);
+
+    // Calculate the bill based on the given conditions
+    if (units <= 50) {
+        bill = units * 0.50;
+    } else if (units <= 150) {
+        bill = 50 * 0.50 + (units - 50) * 0.75;
+    } else if (units <= 250) {
+        bill = 50 * 0.50 + 100 * 0.75 + (units - 150) * 1.20;
+    } else {
+        bill = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (units - 250) * 1.50;
+    }
+
+    // Display the total electricity bill
+    printf("Total electricity bill: Rs. %.2f\n", bill);
+
+    return 0;
+}
+
+==possi neg==
+#include <stdio.h>
+
+int main() {
+    int num;
+    printf("Enter the Number\n");
+    scanf("%d",&num);
+    if(num>0){
+        printf("%d is Possitive\n",num);
+
+    }else if(num<0){
+    printf("%d is Negetive\n",num);
+    }else{
+    printf("%d is Zero\n",num);
+    }
+
+    return 0;
+}
+
+==2 if==
+#include <stdio.h>
+int main()
+{
+
+
+int age = 55;
+float income = 50000.0;
+if(age >= 60) {
+ if (income < 60000.0) {
+ printf("You are eligible for a tax deduction.");
+ } else {
+ printf("You are not eligible for a tax deduction.");
+ }
+} else {
+ printf("You are not eligible for a tax deduction.");
+
+}
+
+    return 0;
+
+}
+
+
+==switch==
+
+#include <stdio.h>
+int main()
+{
+
+
+int dayOfWeek = 3;
+switch (dayOfWeek) {
+ case 1:
+ printf("Monday");
+ break;
+ case 2:
+ printf("Tuesday");
+ break;
+ case 3:
+ printf("Wednesday");
+ break;
+ default:
+ printf("Other day");
+}
+
+
+    return 0;
+
+}
+
+==import==
+#include <stdio.h>
+int main()
+{
+
+
+int age = 17;
+char status = (age >= 18) ? 'A' : 'M';
+printf("Status: %c (A: Adult, M: Minor)", status);
+
+    return 0;
+
+}
+
+
+==book aurthor==
+#include<stdio.h>
+#include<string.h>
+
+struct Book {
+	char title[100];
+	char author[50];
+	double price;
+};
+	
+    int main(){
+	
+	struct Book myBook;
+	strcpy(myBook.title,"The Catche in the Rye");
+	strcpy(myBook.author,"J.D.Salinger");
+	myBook.price = 12.99;
+	printf("Title: %s\n", myBook.title);
+	printf("Author: %s\n", myBook.author);
+	printf("Price: $%.2f\n", myBook.price);
+	return 0;	}
+
+
+==greater than==
+#include <stdio.h>
+#include <stdbool.h>
+int main() {
+	
+int x = 10;
+int y = 4;
+
+ bool isGreaterThan = (x<y);
+ bool isEqual = (x == y); 
+ bool isNotEqual = (x != y); 
+
+printf("Is x greater than y? %s\n", isGreaterThan ? "Yes" : "No");
+printf("Is x equal to y? %s\n", isEqual ? "Yes" : "No"); 
+printf("Is x not equal to y? %s\n", isNotEqual ? "Yes" : "No");
+
+return 0;
+}
+
+==binary==
+#include<stdio.h>
+int main() {
+	
+	int x = 12; // Binary: 1100 
+    int y = 6; // Binary: 0110 
+	
+    int andResult = x & y; // Bitwise AND 
+    int orResult = x | y; // Bitwise OR 
+    int xorResult = x ^ y; // Bitwise XOR 
+    int notResult = ~x; // Bitwise NOT 
+	int leftShift = x << 2; // Left Shift 
+    int rightShift = y >> 1; // Right Shift 
+	
+	printf("AND Result: %d (Binary: %d)\n", andResult, andResult); 
+    printf("OR Result: %d (Binary: %d)\n", orResult, orResult); 
+    printf("XOR Result: %d (Binary: %d)\n", xorResult, xorResult); 
+    printf("NOT Result: %d (Binary: %d)\n", notResult, notResult); 
+    printf("Left Shift Result: %d (Binary: %d)\n", leftShift, leftShift); 
+    printf("Right Shift Result: %d (Binary: %d)\n", rightShift, rightShift);
+	
+	return 0;
+}
 
