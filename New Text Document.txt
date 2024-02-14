@@ -1,0 +1,92 @@
+Q3
+ -----type this one to create react projet in terminal -----
+npx create-react-app food_ordering_frontend
+cd food_ordering_frontend
+
+then create below pages seperately
+
+-----create WelcomePage.js page-------
+
+import React from 'react';
+
+const WelcomePage = () => {
+    return (
+        <div>
+            <h1>Welcome to Food Ordering System</h1>
+            {/* Add your content here */}
+        </div>
+    );
+}
+
+export default WelcomePage;
+
+-----create Login.js ---------
+import React from 'react';
+
+const Login = () => {
+    return (
+        <div>
+            {/* Login form */}
+        </div>
+    );
+}
+export default Login;
+
+
+---------- UserRegistration.js -------
+import React from 'react';
+
+const UserRegistration = () => {
+    return (
+        <div>
+            {/* Registration form */}
+        </div>
+    );
+}
+
+export default UserRegistration;
+
+
+------FoodOrdering.js ----------
+import React from 'react';
+
+const FoodOrdering = () => {
+    return (
+        <div>
+            {/* Food ordering interface */}
+        </div>
+    );
+}
+export default FoodOrdering;
+
+------ type this one inside the terminal -------
+npm install react-router-dom
+
+------- then create App.js -----------
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import WelcomePage from './WelcomePage';
+import Login from './Login';
+import UserRegistration from './UserRegistration';
+
+const App = () => {
+    return (
+        <Router>
+            <div>
+                <Switch>
+                    <Route exact path="/" component={WelcomePage} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/register" component={UserRegistration} />
+                </Switch>
+            </div>
+        </Router>
+    );
+}
+
+export default App;
+
+--------me tika dala wen bn laraveel eka hiriyata kragnn bha kiwa bn palweni eka ubala arn giypu code ekma tiyenwa -----
+
+
+
+
